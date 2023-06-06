@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Nunito:wght@300&display=swap"
+        rel="stylesheet">
+
+    <title>Lista de tarefas</title>
+</head>
+
+<body>
+    <main class="app">
+
+        <section class="saudacao">
+            <h2 class="titulo"> Olá, seja bem-vindo, <input type="text" id="nome" class="nome" placeholder=" Seu nome aqui "> </h2>
+        </section>
+
+        <section class="criar_lista">
+            <h3>Criar lista de tarefas</h3>
+            <form action="" id="form-nova-lista">
+                <h4>o que está na lista de tarefas?</h4>
+                <input type="text" name="conteudo" id="conteudo" placeholder=" Digite aqui.">
+
+                <h4> Escolha uma categoria</h4>
+                <div class="opcoes">
+
+                    <label>
+                        <input type="radio" name="categoria" id="categoria1" value="paraHoje">
+                        <span class=" bolhas bolha-paraHoje"></span>
+                        <div>Fazer hoje</div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="categoria" id="categoria2" value="paraSemana">
+                        <span class=" bolhas bolha-paraSemana"></span>
+                        <div>Fazer durante a semana </div>
+                    </label>
+                </div>
+                <input type="submit" value="Adicionar">
+            </form>
+        </section>
+
+
+        <section class="lista-de-tarefas ">
+            <h3>Lista de tarefas</h3>
+            <div class="lista" id="lista-de-tarefas"></div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+@import url("./css/index.css");
+
+*{
+    --fundo:#e7ecee;
+--claro:#d1813b;
+--hoje: #3A82EE;
+--semana:#bc217b;
+--perigo:#F97B22;
+--escuro:#27374D;
+--sombra: 0 1px 3px rgba(0, 0, 0, 0.1);
+--brilho-hoje:0px 0px 4px rgb(58, 130, 238, 0.75);
+--brilho-semana:0px 0px 4px rgba(227, 113, 179, 0.75);
+
+
+--titulo:'Concert One', cursive;
+--texto:'Nunito', sans-serif;
+
+box-sizing: border-box;
+}
+
+body{
+    font-family: var(--texto);
+    background-color: var(--fundo);
+    color: var(--escuro);
+}
+
+/* vaiaves para botaões e inputs */
+input:not([type="radio"]):not([type="checkbox"]), button{
+    appearance: none;
+    border: none;
+    outline: none;
+    /* background: nBRIone; */
+    cursor: initial;
+}
+
+
+p{
+font-family: var(--texto);
+} 

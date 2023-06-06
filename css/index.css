@@ -1,0 +1,279 @@
+section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5em;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--titulo);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.saudacao .titulo {
+    display: flex;
+    font-size: 2rem;
+
+}
+
+.saudacao .titulo input {
+    margin-left: 0.5rem;
+    /* flex: 1 1 0%; */
+    min-width: 0;
+    font-size: 1.9rem;
+    font-weight: 500;
+    font-family: var(--texto);
+    background-color: var(--funsdo);
+
+}
+
+.criar_lista input[type="text"] {
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: dimgray;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+    margin-bottom: 1.5rem;
+}
+
+.criar_lista .opcoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+}
+
+.criar_lista .opcoes label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+.bolha-paraHoje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--hoje);
+    box-shadow: var(--brilho-hoje);
+}
+
+.bolha-paraSemana {
+    border: 2px solid var(--semana);
+    box-shadow: var(--brilho-semana);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+}
+
+.bolhas::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: rgb(78, 26, 26);
+    /* box-shadow: var(--brilho-hoje); */
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+
+}
+
+input:checked~.bolhas::after {
+    width: 7px;
+    height: 7px;
+    opacity: 1;
+}
+
+.criar_lista .opcoes label div {
+    color: black;
+    font-size: 1.12rem;
+    margin: 1rem;
+    font-weight: 700;
+}
+
+.criar_lista input[type="submit"] {
+    display: block;
+    width: 100%;
+    font-size: 1.13rem;
+    padding: 1rem 1.5rem;
+    color: var(--fundo);
+    background-color: var(--perigo);
+    box-shadow: var(--sombra);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    /* transition: 0.7s ease-in-out; */
+}
+
+.criar_lista input[type="submit"]:hover {
+    opacity: 0.75;
+}
+
+.lista-de-tarefas .lista {
+    margin: 1rem 0;
+
+}
+
+.lista-de-tarefas .item-lista {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem .5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+    margin-bottom: 1rem;
+}
+
+.lista-de-tarefas label {
+    display: block;
+    margin-right: 1rem;
+    cursor: pointer;
+
+}
+
+.lista-de-tarefas .container-lista {
+    flex: 1 1 0%;
+}
+
+.lista-de-tarefas .container-lista input{
+color: black;
+font-size: 1.13rem;
+}
+.lista-de-tarefas .acoes {
+    display: flex;
+    align-items: center;
+}
+
+.lista-de-tarefas .acoes button {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: var(--perigo);
+    transition: 0.2s ease-in-out;
+    font-weight: 900;
+}
+
+.lista-de-tarefas .acoes button:hover {
+    opacity: 0.75;
+}
+
+.lista-de-tarefas .acoes .editar {
+    margin-right: 0.3rem;
+    padding: 2px;
+    background-color: #F97B22;
+    color: white;
+}
+
+.lista-de-tarefas .acoes .deletar {
+    margin-right: 0.2rem;
+    padding: 2px;
+    background-color:;
+    color: var(--perigo) ;
+}
+
+.item-lista.feito .container-lista input {
+    text-decoration: line-through;
+    color: black;
+}
+
+.feito {
+    text-decoration: line-through;
+}
+
+.lista-de-tarefas .acoes {
+    margin-left: auto;
+}
+
+@media (max-width: 426px) {
+    main {
+        /* margin: 1em; */
+        padding: 1em;
+        text-align: center;
+
+    }
+
+
+    .saudacao .titulo {
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+    }
+
+    .saudacao .titulo input {
+        font-size: 16px;
+    }
+
+    .item-lista {
+        width: 100%;
+    }
+
+    .lista-de-tarefas {
+        padding: 0.2rem;
+    }
+
+    .lista-de-tarefas .acoes button {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    /* .lista-de-tarefas label {
+        box-sizing: border-box;
+        margin: 0;
+    } */
+
+    .acoes {
+        display: flex;
+
+        margin: 2px;
+        /* position: absolute; */
+
+    }
+
+    .lista-de-tarefas label {
+        margin-right: 0.1rem;
+
+    }
+
+    .lista-de-tarefas .container-lista {
+        width: auto;
+    }
+
+
+
+}
